@@ -30,11 +30,8 @@ MainWindow::MainWindow(QWidget *parent) :
     toolBar->addAction(openAction);
     toolBar->addAction(saveAction);
 
-    eventLabel = new EventLabel;
-    eventLabel->setMouseTracking(true);
-    this->resize(900,900);
-      this->setCentralWidget(eventLabel);
-
+    painterWidget = new PainterWidget(this);
+    this->setCentralWidget(painterWidget);
 
     statusBar();
 }

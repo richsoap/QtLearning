@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-07-09T09:28:17
+# Project created by QtCreator 2017-07-28T15:52:44
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = MyMainWindow
+TARGET = gobang
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -26,15 +26,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
     mainwindow.cpp \
-    eventlabel.cpp \
-    painterwidget.cpp
+    mypushbutton.cpp \
+    table.cpp \
+    piece.cpp \
+    myscene.cpp
 
 HEADERS += \
     mainwindow.h \
-    eventlabel.h \
-    painterwidget.h
-
-FORMS +=
-
-RESOURCES += \
-    icon.qrc
+    mypushbutton.h \
+    table.h \
+    constants.h \
+    piece.h \
+    myscene.h

@@ -5,7 +5,7 @@
 #include <QSlider>
 #include <QTextEdit>
 
-#include "eventlabel.h"
+#include "painterwidget.h"
 
 
 class MainWindow : public QMainWindow {
@@ -19,7 +19,7 @@ private:
     void save();
     QAction *openAction;
     QAction *saveAction;
-    EventLabel *eventLabel;
+    PainterWidget *painterWidget;
 };
 
 #endif // MAINWINDOW_H
