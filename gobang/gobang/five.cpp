@@ -1,5 +1,6 @@
 #include <string.h>
 #include <stdio.h>
+#include <QDebug>
 #include "five.h"
 
 five::five() {
@@ -45,7 +46,7 @@ void five::init(int kind = 0) {
 }
 
 
-bool five::chess(int x,int y,int color) {
+bool five::addPiece(int x,int y,int color) {
 	if(x > 14 || x < 0 || y > 14 || y < 0) {
 		return false;
 	}
@@ -56,6 +57,13 @@ bool five::chess(int x,int y,int color) {
 	else {
 		return false;
 	}
+}
+void five::removePiece(int x, int y) {
+    if(x > 14 || x < 0 || y > 14 || y < 0) {
+    }
+    else if(field[x+1][y+1] != 0) {
+        field[x+1][y+1] = 0;
+    }
 }
 
 bool five::whoWin(int *result) {
@@ -71,10 +79,10 @@ bool five::whoWin(int *result) {
 				}
 				if(flag == 1) {
 					result[0] = field[p][q];
-					result[1] = p;
-					result[2] = q;
-					result[3] = p+4*dx[i];
-					result[4] = q+4*dy[i];
+                    result[1] = p-1;
+                    result[2] = q-1;
+                    result[3] = p-1+4*dx[i];
+                    result[4] = q-1+4*dy[i];
 					return true;
 				}
 			}

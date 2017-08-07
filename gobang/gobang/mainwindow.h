@@ -5,6 +5,8 @@
 #include <QGraphicsView>
 #include "mypushbutton.h"
 #include "myscene.h"
+#include "five.h"
+#include "winline.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -18,10 +20,13 @@ private slots:
 private:
     int getLoc(qreal x,qreal y);
     Piece* button;
-	Piece* tempPiece;
     MyScene *scene;
     QGraphicsView *view;
-    bool whichSide;
+    int whichSide;
+    bool isInit;
+    five* cacuFive;
+    int* winResult;
+    WinLine *winLine;
 
 protected:
     void mouseMoveEvent(QMouseEvent *event);

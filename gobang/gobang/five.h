@@ -12,7 +12,8 @@ public:
 	five();
 	~five();
 	void init(int kind);
-	bool chess(int x,int y,int color);
+    bool addPiece(int x,int y,int color);
+    void removePiece(int x,int y);
 	bool whoWin(int* result);
 	bool issame(int x,int y,int dir,int level,int **table);
 	void printtable();
