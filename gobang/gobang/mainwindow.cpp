@@ -57,8 +57,14 @@ int MainWindow::getLoc(qreal qx, qreal qy) {
 	by = y / SPACING;
     nx = x - bx * SPACING;
     ny = y - by * SPACING;
+    if(x > 14*SPACING + 1.5*PIECE_RADIUS ||  y > 14*SPACING + 1.5*PIECE_RADIUS) {
+        return -1;
+    }
     if(abs(x + 80) < 1.5 * PIECE_RADIUS && abs(y + 80) < 1.5 * PIECE_RADIUS) {
 		return 0xffff;
+    }
+    if(x < -1.5*PIECE_RADIUS || y < -1.5*PIECE_RADIUS) {
+        return -1;
     }
     if(nx > SPACING - 1.5*PIECE_RADIUS) {
 		bx ++;

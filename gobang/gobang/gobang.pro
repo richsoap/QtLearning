@@ -26,7 +26,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
     mainwindow.cpp \
-    mypushbutton.cpp \
     table.cpp \
     piece.cpp \
     myscene.cpp \
@@ -35,7 +34,6 @@ SOURCES += \
 
 HEADERS += \
     mainwindow.h \
-    mypushbutton.h \
     table.h \
     constants.h \
     piece.h \
